@@ -14,6 +14,7 @@ namespace Text_To_Soundboard
             exampleText[0] = "Welcome to Text to Soundboard, the ultimate TTS engine made to make sentence mixing better.";
             exampleText[1] = "As you can see with the text provided, this engine works flawless! Have fun using this for yours or other's entertainment.";
             exampleText[2] = "Come join our board for the best sound packs available, or submit your own! http://texttosoundboard.boards.net/";
+            exampleText[3] = "";
             text.Text = exampleText[new Random().Next(0, 3)];
         }
 
