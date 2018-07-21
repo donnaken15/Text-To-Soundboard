@@ -1,6 +1,7 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
+using System.Media;
 
 namespace Text_To_Soundboard
 {
@@ -8,14 +9,17 @@ namespace Text_To_Soundboard
     {
         string[] exampleText = new string[50];
 
+        SpeechSynthesizer reader = new SpeechSynthesizer();
+
         public ttsb()
         {
             InitializeComponent();
             exampleText[0] = "Welcome to Text to Soundboard, the ultimate TTS engine made to make sentence mixing better.";
             exampleText[1] = "As you can see with the text provided, this engine works flawless! Have fun using this for yours or other's entertainment.";
             exampleText[2] = "Come join our board for the best sound packs available, or submit your own! http://texttosoundboard.boards.net/";
-            exampleText[3] = "";
-            text.Text = exampleText[new Random().Next(0, 3)];
+            exampleText[3] = "To get the soundpacks working, simply set the sounds directory to where you have downloaded or created the soundpack you want to use.";
+            exampleText[4] = "";
+            text.Text = exampleText[new Random().Next(0, 4)];
         }
 
         private void fontbtn_Click(object sender, EventArgs e)
@@ -28,6 +32,19 @@ namespace Text_To_Soundboard
         {
             setdir.ShowDialog();
             snddir.Text = setdir.SelectedPath;
+        }
+
+        private void startTTSB_Click(object sender, EventArgs e)
+        {
+            foreach (string word in text.Text.Split(' '))
+            {
+                try
+                {
+                    SoundPlayer wav = new SoundPlayer(snddir.Text + "\\" + word+".wav");
+                    wav.PlaySync();
+                }
+                catch { reader.SpeakAsync(word); }
+            }
         }
     }
 }

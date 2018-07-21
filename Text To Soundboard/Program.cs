@@ -1,14 +1,11 @@
-﻿using System;
-using System.Windows.Forms;
-
-namespace Text_To_Soundboard
+﻿namespace Text_To_Soundboard
 {
     static class Program
     {
-        [STAThread]
+        [System.STAThread]
         static void Main()
         {
-            Application.Run(new ttsb());
+            System.Windows.Forms.Application.Run(new ttsb());
         }
     }
 }
