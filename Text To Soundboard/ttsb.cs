@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Speech.Synthesis;
 using System.Media;
+using System.Threading;
 
 namespace Text_To_Soundboard
 {
@@ -38,13 +39,23 @@ namespace Text_To_Soundboard
         {
             foreach (string word in text.Text.Split(' '))
             {
+                string origword = word;
                 try
                 {
-                    SoundPlayer wav = new SoundPlayer(snddir.Text + "\\" + word+".wav");
+                    SoundPlayer wav = new SoundPlayer(snddir.Text + "\\" + word.Replace(".", "").Replace("!", "").Replace(",", "").Replace("?", "").Replace(",", "").Replace(":", "").Replace("/", " slash").Replace("\\", " backslash") +".wav");
                     wav.PlaySync();
                 }
-                catch { reader.SpeakAsync(word); }
+                catch { reader.Speak(word); }
+                if (origword.Contains(".") || origword.Contains("?") || origword.Contains("!"))
+                {
+                    Thread.Sleep(250);
+                }
+                else if (origword.Contains(",") || origword.Contains(":") || origword.Contains(";"))
+                {
+                    Thread.Sleep(125);
+                }
             }
+            GC.Collect();
         }
     }
 }
