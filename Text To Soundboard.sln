@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Text To Soundboard", "Text To Soundboard\Text To Soundboard.csproj", "{5E6AF3A8-B76D-4DA4-9F57-A0290A53AD7D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default program", "Text To Soundboard\Default program.csproj", "{5E6AF3A8-B76D-4DA4-9F57-A0290A53AD7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command line", "Text To Soundboard CMD\Command line.csproj", "{163398EE-A141-4238-B3E6-04516392B7B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5E6AF3A8-B76D-4DA4-9F57-A0290A53AD7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E6AF3A8-B76D-4DA4-9F57-A0290A53AD7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E6AF3A8-B76D-4DA4-9F57-A0290A53AD7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163398EE-A141-4238-B3E6-04516392B7B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163398EE-A141-4238-B3E6-04516392B7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163398EE-A141-4238-B3E6-04516392B7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163398EE-A141-4238-B3E6-04516392B7B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

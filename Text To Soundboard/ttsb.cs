@@ -37,6 +37,7 @@ namespace Text_To_Soundboard
 
         private void startTTSB_Click(object sender, EventArgs e)
         {
+
             foreach (string word in text.Text.Split(' '))
             {
                 string origword = word;
