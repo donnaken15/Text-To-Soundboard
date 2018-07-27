@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Default program", "Text To 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command line", "Text To Soundboard CMD\Command line.csproj", "{163398EE-A141-4238-B3E6-04516392B7B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OS-X", "OS-X\OS-X.csproj", "{343F0C7F-1035-4BBD-A81D-D29DFFB0B496}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{163398EE-A141-4238-B3E6-04516392B7B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{163398EE-A141-4238-B3E6-04516392B7B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{163398EE-A141-4238-B3E6-04516392B7B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343F0C7F-1035-4BBD-A81D-D29DFFB0B496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343F0C7F-1035-4BBD-A81D-D29DFFB0B496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343F0C7F-1035-4BBD-A81D-D29DFFB0B496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343F0C7F-1035-4BBD-A81D-D29DFFB0B496}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
